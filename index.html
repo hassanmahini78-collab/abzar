@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ابزار بندر - فروش انواع ابزارآلات">
+  <title>ابزار بندر | فروشگاه ابزار</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+  <div class="container nav">
+
+    <a href="#" class="logo">
+      <span>🔧</span>
+      ابزار بندر
+    </a>
+
+    <nav>
+      <a href="#home">خانه</a>
+      <a href="#products">محصولات</a>
+      <a href="#categories">دسته‌بندی</a>
+      <a href="#about">درباره ما</a>
+      <a href="#contact">تماس با ما</a>
+    </nav>
+
+    <button class="cart-btn" onclick="openCart()">
+      🛒 سبد خرید
+      <span id="cartCount">0</span>
+    </button>
+
+  </div>
+</header>
+
+
+<main>
+
+<section id="home" class="hero">
+  <div class="container hero-content">
+
+    <div>
+      <span class="badge">فروش تخصصی ابزارآلات</span>
+
+      <h1>
+        ابزار حرفه‌ای،
+        <strong>برای کار حرفه‌ای</strong>
+      </h1>
+
+      <p>
+        خرید انواع ابزار دستی، برقی و تجهیزات کارگاهی
+        با ارسال به سراسر کشور
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#products" class="primary-btn">مشاهده محصولات</a>
+        <a href="#contact" class="secondary-btn">تماس با ما</a>
+      </div>
+    </div>
+
+    <div class="hero-image">
+      🔨
+      <div class="tool-circle">⚙️</div>
+      <div class="tool-circle circle2">🔧</div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="categories" class="section">
+  <div class="container">
+
+    <div class="section-title">
+      <span>دسته‌بندی محصولات</span>
+      <h2>ابزار مورد نیازت را پیدا کن</h2>
+    </div>
+
+    <div class="categories">
+
+      <button onclick="filterCategory('همه')">
+        <span>🛠️</span>
+        همه ابزارها
+      </button>
+
+      <button onclick="filterCategory('ابزار دستی')">
+        <span>🔧</span>
+        ابزار دستی
+      </button>
+
+      <button onclick="filterCategory('ابزار برقی')">
+        <span>⚡</span>
+        ابزار برقی
+      </button>
+
+      <button onclick="filterCategory('اندازه گیری')">
+        <span>📏</span>
+        اندازه‌گیری
+      </button>
+
+      <button onclick="filterCategory('تجهیزات')">
+        <span>🧰</span>
+        تجهیزات
+      </button>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section id="products" class="section products-section">
+
+  <div class="container">
+
+    <div class="products-top">
+
+      <div class="section-title">
+        <span>محصولات فروشگاه</span>
+        <h2>محصولات ابزار بندر</h2>
+      </div>
+
+      <div class="search-box">
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="جستجوی ابزار..."
+          oninput="searchProducts()"
+        >
+        🔍
+      </div>
+
+    </div>
+
+    <div id="productsGrid" class="products-grid"></div>
+
+  </div>
+
+</section>
+
+
+<section id="about" class="section about">
+
+  <div class="container about-box">
+
+    <div>
+      <span class="badge">درباره ابزار بندر</span>
+
+      <h2>همراه شما در انتخاب ابزار مناسب</h2>
+
+      <p>
+        ابزار بندر با هدف ارائه ابزارهای کاربردی و باکیفیت
+        برای تعمیرکاران، صنعتگران، کارگاه‌ها و مصرف‌کنندگان
+        فعالیت می‌کند.
+      </p>
+
+      <div class="features">
+        <div>✓ تنوع ابزار</div>
+        <div>✓ ارسال سفارش</div>
+        <div>✓ پشتیبانی تلفنی</div>
+        <div>✓ ثبت سفارش آنلاین</div>
+      </div>
+
+    </div>
+
+    <div class="about-icon">
+      🧰
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="contact" class="section contact">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>ارتباط با ما</span>
+      <h2>تماس با ابزار بندر</h2>
+    </div>
+
+    <div class="contact-grid">
+
+      <div class="contact-card">
+        <div>📞</div>
+        <h3>شماره تماس</h3>
+        <a href="tel:09170824124">09170824124</a>
+      </div>
+
+      <div class="contact-card">
+        <div>📍</div>
+        <h3>آدرس</h3>
+        <p>بوشهر، دلوار، روبروی بانک ملت</p>
+      </div>
+
+      <div class="contact-card">
+        <div>🛒</div>
+        <h3>ثبت سفارش</h3>
+        <p>به‌صورت آنلاین از طریق سایت</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <div class="container footer">
+
+    <div>
+      <div class="footer-logo">🔧 ابزار بندر</div>
+      <p>فروش انواع ابزارآلات و تجهیزات</p>
+    </div>
+
+    <div>
+      <h3>دسترسی سریع</h3>
+      <a href="#home">خانه</a>
+      <a href="#products">محصولات</a>
+      <a href="#contact">تماس با ما</a>
+    </div>
+
+    <div>
+      <h3>تماس</h3>
+      <p>📞 09170824124</p>
+      <p>📍 بوشهر، دلوار، روبروی بانک ملت</p>
+    </div>
+
+  </div>
+
+  <div class="copyright">
+    © 2026 ابزار بندر - تمامی حقوق محفوظ است.
+  </div>
+
+</footer>
+
+
+<!-- CART -->
+
+<div id="cartModal" class="modal">
+
+  <div class="modal-box">
+
+    <button class="close" onclick="closeCart()">×</button>
+
+    <h2>🛒 سبد خرید</h2>
+
+    <div id="cartItems"></div>
+
+    <div class="cart-total">
+      <span>مبلغ کل:</span>
+      <strong id="cartTotal">0 تومان</strong>
+    </div>
+
+    <button class="checkout-btn" onclick="openCheckout()">
+      ادامه ثبت سفارش
+    </button>
+
+  </div>
+
+</div>
+
+
+<!-- CHECKOUT -->
+
+<div id="checkoutModal" class="modal">
+
+  <div class="modal-box checkout-box">
+
+    <button class="close" onclick="closeCheckout()">×</button>
+
+    <div id="checkoutForm">
+
+      <h2>📦 اطلاعات ارسال سفارش</h2>
+
+      <p class="form-note">
+        لطفاً اطلاعات زیر را با دقت وارد کنید.
+      </p>
+
+      <label>نام و نام خانوادگی *</label>
+      <input id="customerName" type="text" placeholder="مثلاً علی احمدی">
+
+      <label>شماره موبایل *</label>
+      <input id="customerPhone" type="tel" placeholder="0912xxxxxxx">
+
+      <label>استان *</label>
+      <input id="customerProvince" type="text" placeholder="استان">
+
+      <label>شهر *</label>
+      <input id="customerCity" type="text" placeholder="شهر">
+
+      <label>آدرس کامل *</label>
+      <textarea
+        id="customerAddress"
+        placeholder="خیابان، کوچه، پلاک، واحد..."
+      ></textarea>
+
+      <label>کد پستی *</label>
+      <input id="customerPostal" type="text" placeholder="۱۰ رقم">
+
+      <label>توضیحات سفارش</label>
+      <textarea
+        id="customerNote"
+        placeholder="توضیحات اضافی در صورت نیاز..."
+      ></textarea>
+
+      <button class="checkout-btn" onclick="goToPayment()">
+        ادامه و پرداخت
+      </button>
+
+    </div>
+
+
+    <div id="paymentPage" class="payment-page">
+
+      <div class="payment-icon">💳</div>
+
+      <h2>پرداخت سفارش</h2>
+
+      <p>
+        مبلغ سفارش خود را به شماره کارت زیر واریز کنید.
+      </p>
+
+      <div class="card-number">
+        0000 0000 0000 0000
+      </div>
+
+      <small>
+        شماره کارت فروشگاه
+      </small>
+
+      <div class="payment-total">
+        مبلغ قابل پرداخت:
+        <strong id="paymentTotal"></strong>
+      </div>
+
+      <div class="payment-warning">
+        ⚠️ پس از واریز، اطلاعات پرداخت را نزد خود نگه دارید
+        و برای پیگیری سفارش با فروشگاه تماس بگیرید.
+      </div>
+
+      <button class="copy-card" onclick="copyCard()">
+        📋 کپی شماره کارت
+      </button>
+
+      <button class="final-btn" onclick="finishOrder()">
+        پرداخت را انجام دادم
+      </button>
+
+    </div>
+
+
+    <div id="successPage" class="success-page">
+
+      <div class="success-icon">✓</div>
+
+      <h2>سفارش شما ثبت شد</h2>
+
+      <p>
+        اطلاعات سفارش شما با موفقیت ثبت شد.
+      </p>
+
+      <p>
+        برای پیگیری سفارش با شماره
+        <strong>09170824124</strong>
+        تماس بگیرید.
+      </p>
+
+      <button class="checkout-btn" onclick="location.reload()">
+        بازگشت به فروشگاه
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
